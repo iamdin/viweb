@@ -1,0 +1,45 @@
+{
+	"name": "@viweb/vscode",
+	"displayName": "viweb-vscode",
+	"description": "vibe dev for vscode",
+	"private": true,
+	"version": "0.0.0",
+	"engines": {
+		"vscode": "^1.99.1"
+	},
+	"categories": ["AI"],
+	"activationEvents": ["onStartupFinished"],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": []
+	},
+	"scripts": {
+		"stub": "pnpm run build --sourcemap",
+		"build": "tsdown src/extension.ts --target esnext --minify --external vscode --format cjs",
+		"compile-tests": "tsc -p . --outDir out",
+		"watch-tests": "tsc -p . -w --outDir out",
+		"test": "vscode-test",
+		"pack": "vsce package -o dist --no-dependencies --skip-license",
+		"publish": "vsce publish --no-dependencies"
+	},
+	"devDependencies": {
+		"@trpc/server": "^11.5.0",
+		"@types/cors": "^2.8.19",
+		"@types/express": "^5.0.3",
+		"@types/mocha": "^10.0.10",
+		"@types/vscode": "1.99.1",
+		"@types/ws": "^8.18.1",
+		"@viweb/vscode-trpc": "workspace:*",
+		"@vscode/test-cli": "^0.0.11",
+		"@vscode/test-electron": "^2.5.2",
+		"@vscode/vsce": "^3.6.0",
+		"cors": "^2.8.5",
+		"express": "^5.1.0",
+		"superjson": "^2.2.2",
+		"tsdown": "^0.13.0",
+		"zod": "^3.25.67"
+	},
+	"dependencies": {
+		"ws": "^8.18.3"
+	}
+}

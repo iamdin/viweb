@@ -1,0 +1,4 @@
+declare const __VIBE_DEV_CODE_INSPECTOR_CLIENT_CODE_RAW__: string;
+
+export const vibeDevCodeInspectorClientCodeRaw =
+	__VIBE_DEV_CODE_INSPECTOR_CLIENT_CODE_RAW__;

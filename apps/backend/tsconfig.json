@@ -1,0 +1,12 @@
+{
+	"extends": "@viweb/typescript/ts-library.json",
+	"compilerOptions": {
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"target": "ES2018",
+		"noEmit": true,
+		"types": ["node"],
+		"outDir": "./dist"
+	},
+	"exclude": ["node_modules"]
+}

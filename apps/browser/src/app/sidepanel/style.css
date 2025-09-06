@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+body {
+	overscroll-behavior: none;
+}
+
+#root {
+	@apply absolute inset-0;
+}

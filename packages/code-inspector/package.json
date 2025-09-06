@@ -1,0 +1,69 @@
+{
+	"name": "@viweb/code-inspector",
+	"version": "0.0.2",
+	"description": "Unplugin for vibe dev code inspector",
+	"keywords": ["unplugin", "vite", "webpack", "rspack"],
+	"files": ["dist"],
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.js"
+		},
+		"./loader": {
+			"import": "./dist/loader.mjs",
+			"require": "./dist/loader.js"
+		},
+		"./rspack": {
+			"import": "./dist/rspack.mjs",
+			"require": "./dist/rspack.js"
+		},
+		"./vite": {
+			"import": "./dist/vite.mjs",
+			"require": "./dist/vite.js"
+		},
+		"./webpack": {
+			"import": "./dist/webpack.mjs",
+			"require": "./dist/webpack.js"
+		},
+		"./*": "./*"
+	},
+	"typesVersions": {
+		"*": {
+			"*": ["./dist/*", "./*"]
+		}
+	},
+	"scripts": {
+		"stub": "tsdown",
+		"build": "tsdown",
+		"typecheck": "tsc --noEmit",
+		"clean": "git clean -xdf node_modules dist .turbo"
+	},
+	"dependencies": {
+		"@viweb/code-inspector-client": "workspace:*",
+		"@viweb/code-inspector-core": "workspace:*",
+		"unplugin": "^2.3.6",
+		"unplugin-utils": "^0.3.0"
+	},
+	"devDependencies": {
+		"tsdown": "^0.13.0"
+	},
+	"peerDependencies": {
+		"@rspack/core": "^1.2.0",
+		"vite": ">=3",
+		"webpack": "^4 || ^5"
+	},
+	"peerDependenciesMeta": {
+		"vite": {
+			"optional": true
+		},
+		"webpack": {
+			"optional": true
+		},
+		"@rspack/core": {
+			"optional": true
+		}
+	}
+}
