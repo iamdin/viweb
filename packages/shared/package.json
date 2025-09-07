@@ -1,0 +1,20 @@
+{
+	"name": "@viweb/shared",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+  "exports": {
+		"./extension": "./src/extension/index.ts",
+		"./extension/message": "./src/extension/message.ts",
+		"./*": "./*"
+	},
+	"scripts": {
+		"stub": "tsdown",
+		"build": "tsdown",
+		"clean": "git clean -xdf node_modules dist .turbo"
+	},
+	"devDependencies": {
+		"@viweb/typescript": "workspace:*",
+		"tsdown": "^0.13.5"
+	}
+}
