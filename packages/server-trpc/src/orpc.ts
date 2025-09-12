@@ -1,22 +1,8 @@
-import { os, streamToEventIterator, type } from "@orpc/server";
-import { type UIMessage, convertToModelMessages, streamText } from "ai";
-import { claudeCode } from "ai-sdk-provider-claude-code";
+import { os } from '@orpc/server'
+import type { ClaudeCodeAgent } from './agents/claude-code'
 
-const orpc = os.$context();
+export type ORPCContext = {
+  claudeCodeAgent: ClaudeCodeAgent
+}
 
-export const chatRouter = orpc.router({
-	chat: orpc
-		.input(type<{ chatId: string; messages: UIMessage[] }>())
-		.handler(({ input }) => {
-			console.log("chat", input);
-			const result = streamText({
-				model: claudeCode("sonnet"),
-				system: "You are a helpful assistant.",
-				messages: convertToModelMessages(input.messages),
-			});
-
-			return streamToEventIterator(result.toUIMessageStream());
-		}),
-});
-
-export type ChatRouter = typeof chatRouter;
+export const orpc = os.$context<ORPCContext>()

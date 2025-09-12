@@ -1,4 +1,4 @@
-import { RPCHandler } from "@orpc/server/node";
-import { chatRouter } from "@viweb/server-trpc/orpc";
+import { RPCHandler } from '@orpc/server/node'
+import { routes } from '@viweb/server-trpc/routes'
 
-export const handler = new RPCHandler(chatRouter);
+export const handler = new RPCHandler(routes)

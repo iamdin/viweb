@@ -2,8 +2,15 @@
 	"name": "@viweb/code-inspector",
 	"version": "0.0.2",
 	"description": "Unplugin for vibe dev code inspector",
-	"keywords": ["unplugin", "vite", "webpack", "rspack"],
-	"files": ["dist"],
+	"keywords": [
+		"unplugin",
+		"vite",
+		"webpack",
+		"rspack"
+	],
+	"files": [
+		"dist"
+	],
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",
 	"types": "./dist/index.d.ts",
@@ -32,7 +39,10 @@
 	},
 	"typesVersions": {
 		"*": {
-			"*": ["./dist/*", "./*"]
+			"*": [
+				"./dist/*",
+				"./*"
+			]
 		}
 	},
 	"scripts": {

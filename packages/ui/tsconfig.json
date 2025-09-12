@@ -1,0 +1,14 @@
+{
+	"extends": "@viweb/typescript/react-library.json",
+	"compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"declaration": true,
+		"baseUrl": ".",
+		"paths": {
+			"@viweb/ui/*": ["./src/*"]
+		}
+	},
+	"include": ["src"]
+}

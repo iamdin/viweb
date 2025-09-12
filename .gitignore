@@ -26,8 +26,9 @@ coverage
 out/
 build
 dist
-.wxt
 .vscode-test
+.tanstack
+.output
 
 # Debug
 npm-debug.log*

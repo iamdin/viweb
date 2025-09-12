@@ -2,8 +2,12 @@
 	"name": "@viweb/toolbar-core",
 	"version": "0.0.16",
 	"type": "module",
-	"keywords": ["inspector"],
-	"files": ["dist"],
+	"keywords": [
+		"inspector"
+	],
+	"files": [
+		"dist"
+	],
 	"main": "./dist/index.js",
 	"module": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -18,7 +22,10 @@
 	},
 	"typesVersions": {
 		"*": {
-			"*": ["./dist/*", "./*"]
+			"*": [
+				"./dist/*",
+				"./*"
+			]
 		}
 	},
 	"publishConfig": {
